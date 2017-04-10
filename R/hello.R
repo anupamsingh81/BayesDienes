@@ -42,6 +42,6 @@ Bayes <- function(sd,obtained,meanoftheory,uniform,sdtheory,tail)
   {
 g = Bfkay(sd,obtained,meanoftheory,uniform,sdtheory,tail)
 
-h = c("The Likelihood Thory is " ,g$LikelihoodTheory,"The Likelihood of Null is  is" ,g$Likelihoodnull, "The Bayes Factor is",g$BayesFactor )
+h = c("The Likelihood of Theory is " ,g$LikelihoodTheory,"The Likelihood of Null is  is" ,g$Likelihoodnull, "The Bayes Factor is",g$BayesFactor )
 return(h)
 }
