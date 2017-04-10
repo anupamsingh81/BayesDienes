@@ -1,0 +1,10 @@
+Package: BayesDienes
+Type: Package
+Title: BayesFactorCalculator by dienes method
+Version: 0.1.0
+Author: Anupam Singh
+Maintainer: The package maintainer <anupampom@gmail.com>
+Description: BayesFactor Calculate by half normal method
+License: General
+Encoding: UTF-8
+LazyData: true
