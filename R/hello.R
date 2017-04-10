@@ -47,6 +47,6 @@ BfkaBy<-function(sd, obtained, uniform, lower=0, upper=1, meanoftheory=0, sdtheo
   LikelihoodTheory <- area
   Likelihoodnull <- dnorm(obtained, 0, sd)
   BayesFactor <- LikelihoodTheory / Likelihoodnull
-  ret <- c("The Likelihood Of Theory is = " , LikelihoodTheory, "The Likelihood of null is= ",  Likelihoodnull, " The BayesFactor is ratio of likelihood of theory to null and is equal to ", BayesFactor)
-  return(ret)
+#  ret <- c("The Likelihood Of Theory is = " , LikelihoodTheory, "The Likelihood of null is= ",  Likelihoodnull, " The BayesFactor is ratio of likelihood of theory to null and is equal to ", BayesFactor)
+  BayesFactor
 }
