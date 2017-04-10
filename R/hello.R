@@ -1,19 +1,6 @@
-# Hello, world!
-#
-# This is an example function named 'hello'
-# which prints 'Hello, world!'.
-#
-# You can learn more about package authoring with RStudio at:
-#
-#   http://r-pkgs.had.co.nz/
-#
-# Some useful keyboard shortcuts for package authoring:
-#
-#   Build and Reload Package:  'Ctrl + Shift + B'
-#   Check Package:             'Ctrl + Shift + E'
-#   Test Package:              'Ctrl + Shift + T'
 
-BfkaBy<-function(sd, obtained, uniform, lower=0, upper=1, meanoftheory=0, sdtheory=1, tail=2)
+
+Bfkay<-function(sd, obtained, uniform, lower=0, upper=1, meanoftheory=0, sdtheory=1, tail=2)
 {
 
   area <- 0
@@ -47,6 +34,14 @@ BfkaBy<-function(sd, obtained, uniform, lower=0, upper=1, meanoftheory=0, sdtheo
   LikelihoodTheory <- area
   Likelihoodnull <- dnorm(obtained, 0, sd)
   BayesFactor <- LikelihoodTheory / Likelihoodnull
-#  ret <- c("The Likelihood Of Theory is = " , LikelihoodTheory, "The Likelihood of null is= ",  Likelihoodnull, " The BayesFactor is ratio of likelihood of theory to null and is equal to ", BayesFactor)
-  BayesFactor
+ ret <- list("LikelihoodTheory" = LikelihoodTheory, "Likelihoodnull" = Likelihoodnull, "BayesFactor" = BayesFactor)
+  ret
+}
+
+Bayes <- function(sd,obtained,meanoftheory,uniform,sdtheory,tail)
+  {
+g = Bfkay(sd,obtained,meanoftheory,uniform,sdtheory,tail)
+
+h = c("The Likelihood Thory is " ,g$LikelihoodTheory,"The Likelihood of Null is  is" ,g$Likelihoodnull, "The Bayes Factor is",g$BayesFactor )
+return(h)
 }
